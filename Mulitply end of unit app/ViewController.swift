@@ -58,7 +58,19 @@ class ViewController: UIViewController {
 //        default:
         
         }
-
+    
+    func comparisonCaptilizeStatements() {
+        if comparisonResultLabel.text == "true" {
+            comparisonResultLabel.text = "True"
+        }
+        else if comparisonResultLabel.text == "false" {
+            comparisonResultLabel.text = "False"
+        }
+    }
+    func compairsonResigningKeyboard() {
+        comparison1TextField.resignFirstResponder()
+        comparison2TextField.resignFirstResponder()
+    }
     
     @IBAction func changeComparisonSegmentedController(_ sender: UISegmentedControl) {
         var comparisonFirstNumber = comparison1TextField.text!
@@ -71,88 +83,38 @@ class ViewController: UIViewController {
         case 0:
             comparisonTotalAnswer = comparisonFirstValue > comparisonSecondValue
             comparisonResultLabel.text = "\(comparisonTotalAnswer)"
-            
-            if comparisonResultLabel.text == "true" {
-                comparisonResultLabel.text = "True"
-            }
-            else if comparisonResultLabel.text == "false" {
-                comparisonResultLabel.text = "False"
-            }
-            comparison1TextField.resignFirstResponder()
-            comparison2TextField.resignFirstResponder()
+            compairsonResigningKeyboard()
+            comparisonCaptilizeStatements()
         case 1:
             comparisonTotalAnswer = comparisonFirstValue >= comparisonSecondValue
             comparisonResultLabel.text = "\(comparisonTotalAnswer)"
-            
-            if comparisonResultLabel.text == "true" {
-                comparisonResultLabel.text = "True"
-            }
-            else if comparisonResultLabel.text == "false" {
-                comparisonResultLabel.text = "False"
-            }
-            comparison1TextField.resignFirstResponder()
-            comparison2TextField.resignFirstResponder()
+            compairsonResigningKeyboard()
+            comparisonCaptilizeStatements()
         case 2:
             comparisonTotalAnswer = comparisonFirstValue < comparisonSecondValue
             comparisonResultLabel.text = "\(comparisonTotalAnswer)"
-            
-            if comparisonResultLabel.text == "true" {
-                comparisonResultLabel.text = "True"
-            }
-            else if comparisonResultLabel.text == "false" {
-                comparisonResultLabel.text = "False"
-            }
-            comparison1TextField.resignFirstResponder()
-            comparison2TextField.resignFirstResponder()
+            compairsonResigningKeyboard()
+            comparisonCaptilizeStatements()
         case 3:
             comparisonTotalAnswer = comparisonFirstValue <= comparisonSecondValue
             comparisonResultLabel.text = "\(comparisonTotalAnswer)"
-            
-            if comparisonResultLabel.text == "true" {
-                comparisonResultLabel.text = "True"
-            }
-            else if comparisonResultLabel.text == "false" {
-                comparisonResultLabel.text = "False"
-            }
-            comparison1TextField.resignFirstResponder()
-            comparison2TextField.resignFirstResponder()
+            compairsonResigningKeyboard()
+            comparisonCaptilizeStatements()
         case 4:
             comparisonTotalAnswer = comparisonFirstValue == comparisonSecondValue
             comparisonResultLabel.text = "\(comparisonTotalAnswer)"
-            
-            if comparisonResultLabel.text == "true" {
-                comparisonResultLabel.text = "True"
-            }
-            else if comparisonResultLabel.text == "false" {
-                comparisonResultLabel.text = "False"
-            }
-            comparison1TextField.resignFirstResponder()
-            comparison2TextField.resignFirstResponder()
+            compairsonResigningKeyboard()
+            comparisonCaptilizeStatements()
         case 5:
             comparisonTotalAnswer = comparisonFirstValue != comparisonSecondValue
             comparisonResultLabel.text = "\(comparisonTotalAnswer)"
-            
-            if comparisonResultLabel.text == "true" {
-                comparisonResultLabel.text = "True"
-            }
-            else if comparisonResultLabel.text == "false" {
-                comparisonResultLabel.text = "False"
-            }
-            comparison1TextField.resignFirstResponder()
-            comparison2TextField.resignFirstResponder()
+            compairsonResigningKeyboard()
+            comparisonCaptilizeStatements()
         default:
             comparisonTotalAnswer = comparisonFirstValue > comparisonSecondValue
             comparisonResultLabel.text = "\(comparisonTotalAnswer)"
-            
-            if comparisonResultLabel.text == "true" {
-                comparisonResultLabel.text = "True"
-            }
-            else if comparisonResultLabel.text == "false" {
-                comparisonResultLabel.text = "False"
-            }
-            comparison1TextField.resignFirstResponder()
-            comparison2TextField.resignFirstResponder()
-        }
+            compairsonResigningKeyboard()
+            comparisonCaptilizeStatements()        }
     }
 
     @IBAction func displayComparisonResultButton(_ sender: UIButton) {}
