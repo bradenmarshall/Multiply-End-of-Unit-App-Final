@@ -55,17 +55,77 @@ class ViewController: UIViewController {
     
     
     @IBAction func ChangeValueSlider(_ sender: UISlider) {
+        sender.minimumValue = 0
+        sender.maximumValue = 100
+        number1TextField.text = String(Int(sender.value))
     }
     
     
     @IBAction func ChangeValueSlider2(_ sender: UISlider) {
+        sender.minimumValue = 0
+        sender.maximumValue = 100
+        number2TextField.text = String(Int(sender.value))
     }
     
     @IBAction func changeOperatorSegmentedController(_ sender: UISegmentedControl) {
-//        switch operatorSegmentedController.selectedSegmentIndex {
-//        case 0:
-          //  operatorUse
-//        default:
+        var number1 = number1TextField.text!
+        var number2 = number2TextField.text!
+        var finalNumber1 = (number1 as NSString).integerValue
+        var finalNumber2 = (number2 as NSString).integerValue
+        var totalAnswer = 0
+        
+        func showImage() {
+            if totalAnswer == 64 {
+                operatorImageView.image = UIImage(named: "yoshi kart")
+                }
+            else if totalAnswer % 2 == 1 {
+                    operatorImageView.image = UIImage(named: "stock market up")
+                    }
+                    else if totalAnswer % 2 == 0 {
+                    operatorImageView.image = UIImage(named: "stock market crash")
+                   }
+            number1TextField.resignFirstResponder()
+            number2TextField.resignFirstResponder()
+        
+        }
+        
+        switch operatorSegmentedController.selectedSegmentIndex {
+        case 0:
+            totalAnswer = finalNumber1 + finalNumber2
+            operatorResultLabel.text = "\(totalAnswer)"
+            
+           showImage()
+                    
+        case 1:
+            totalAnswer = finalNumber1 - finalNumber2
+            operatorResultLabel.text = "\(totalAnswer)"
+            
+            showImage()
+            
+        case 2:
+            totalAnswer = finalNumber1 * finalNumber2
+            operatorResultLabel.text = "\(totalAnswer)"
+            
+          showImage()
+                    
+        case 3:
+            totalAnswer = finalNumber1 / finalNumber2
+            operatorResultLabel.text = "\(totalAnswer)"
+            
+           showImage()
+            
+        case 4:
+            totalAnswer = finalNumber1 % finalNumber2
+            operatorResultLabel.text = "\(totalAnswer)"
+            
+           showImage()
+            
+        default:
+            totalAnswer = finalNumber1 + finalNumber2
+            operatorResultLabel.text = "\(totalAnswer)"
+            
+           showImage()
+        }
         
         }
     
