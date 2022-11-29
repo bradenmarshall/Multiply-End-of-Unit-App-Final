@@ -247,6 +247,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Slider1" destination="rap-m3-Za5" id="1hT-Xv-dbo"/>
+                        <outlet property="Slider2" destination="SkJ-LN-sBh" id="QDh-Zr-1U0"/>
                         <outlet property="comparison1TextField" destination="09x-xX-WVo" id="xGY-cQ-g5r"/>
                         <outlet property="comparison2TextField" destination="3eb-xG-GKA" id="s29-gd-60D"/>
                         <outlet property="comparisonResultButton" destination="hSV-cC-emf" id="dAd-vv-9Pl"/>
