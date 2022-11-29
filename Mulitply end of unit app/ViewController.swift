@@ -53,6 +53,14 @@ class ViewController: UIViewController {
  
     //if statement for values on slider
     
+    
+    @IBAction func ChangeValueSlider(_ sender: UISlider) {
+    }
+    
+    
+    @IBAction func ChangeValueSlider2(_ sender: UISlider) {
+    }
+    
     @IBAction func changeOperatorSegmentedController(_ sender: UISegmentedControl) {
 //        switch operatorSegmentedController.selectedSegmentIndex {
 //        case 0:
