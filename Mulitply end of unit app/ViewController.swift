@@ -11,8 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var number1TextField: UITextField!
     @IBOutlet weak var number2TextField: UITextField!
-    @IBOutlet weak var operatorResultButton: UIButton!
-    @IBOutlet weak var operatorClearButton: UIButton!
     @IBOutlet weak var operatorImageView: UIImageView!
     @IBOutlet weak var operatorResultLabel: UILabel!
     @IBOutlet weak var operatorSegmentedController: UISegmentedControl!
@@ -21,8 +19,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var comparison1TextField: UITextField!
     @IBOutlet weak var comparison2TextField: UITextField!
-    @IBOutlet weak var comparisonClearButton: UIButton!
-    @IBOutlet weak var comparisonResultButton: UIButton!
     @IBOutlet weak var comparisonResultLabel: UILabel!
     @IBOutlet weak var comparisonSegmentedController: UISegmentedControl!
     
@@ -32,40 +28,25 @@ class ViewController: UIViewController {
         comparisonResultLabel.text = "True or False"
     }
 
-    @IBAction func displayOperatorResultButton(_ sender: UIButton) {
-    
-        
-//       if operatorResultLabel == operatorResult64 {
-//               peratorImageView.image = UIimage(named: "yoshi kart")
-//            }
-//       else {Int(operatorResultLabel.text) % 2 = 1
-//            operatorImageView.image = UIimage(named: "stack market up")
-//        }
-//        else {Int(operatorResultLabel.text) % 2 = 0
-//            operatorImageView.image = UIimage(named: "stock market crash")
-//        }
-        
-    }
-    
-    @IBAction func clearOperatorResultButton(_ sender: UIButton) {
-    }
-    
- 
-    //if statement for values on slider
-    
-    
     @IBAction func ChangeValueSlider(_ sender: UISlider) {
         sender.minimumValue = 0
         sender.maximumValue = 100
         number1TextField.text = String(Int(sender.value))
     }
     
-    
     @IBAction func ChangeValueSlider2(_ sender: UISlider) {
         sender.minimumValue = 0
         sender.maximumValue = 100
         number2TextField.text = String(Int(sender.value))
     }
+    
+    @IBAction func numberClearButton(_ sender: UIButton) {
+        number1TextField.text = " "
+        number2TextField.text = " "
+        operatorResultLabel.text = "Result"
+        operatorImageView.image = UIImage(named: "images")
+    }
+    
     
     @IBAction func changeOperatorSegmentedController(_ sender: UISegmentedControl) {
         var number1 = number1TextField.text!
@@ -127,7 +108,7 @@ class ViewController: UIViewController {
            showImage()
         }
         
-        }
+    }
     
     func comparisonCaptilizeStatements() {
         if comparisonResultLabel.text == "true" {
@@ -186,8 +167,6 @@ class ViewController: UIViewController {
             compairsonResigningKeyboard()
             comparisonCaptilizeStatements()        }
     }
-
-    @IBAction func displayComparisonResultButton(_ sender: UIButton) {}
 
     @IBAction func clearComparisonResultButton(_sender: UIButton) {
         comparisonResultLabel.text = "True or False"
