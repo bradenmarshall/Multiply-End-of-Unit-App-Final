@@ -38,6 +38,9 @@
                                     </textField>
                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rap-m3-Za5">
                                         <rect key="frame" x="-2" y="54.5" width="154" height="31.5"/>
+                                        <connections>
+                                            <action selector="ChangeValueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="RbF-3u-4QV"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
@@ -61,6 +64,9 @@
                                     </textField>
                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SkJ-LN-sBh">
                                         <rect key="frame" x="-2" y="54.5" width="154" height="31.5"/>
+                                        <connections>
+                                            <action selector="ChangeValueSlider2:" destination="BYZ-38-t0r" eventType="valueChanged" id="L5Y-y6-Fqa"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>
