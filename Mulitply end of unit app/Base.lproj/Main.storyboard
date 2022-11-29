@@ -105,9 +105,6 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Result Button"/>
-                                <connections>
-                                    <action selector="displayComparisonResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftY-Jb-2gu"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i26-qK-rxo">
                                 <rect key="frame" x="264" y="289.5" width="90" height="32"/>
@@ -130,7 +127,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Clear"/>
                                 <connections>
-                                    <action selector="clearComparisonResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="puu-ge-5TW"/>
+                                    <action selector="clearComparisonResultButtonWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="raC-t4-gh5"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-0f-ZIW">
@@ -252,7 +249,9 @@
                     <connections>
                         <outlet property="comparison1TextField" destination="09x-xX-WVo" id="xGY-cQ-g5r"/>
                         <outlet property="comparison2TextField" destination="3eb-xG-GKA" id="s29-gd-60D"/>
+                        <outlet property="comparisonResultButton" destination="hSV-cC-emf" id="dAd-vv-9Pl"/>
                         <outlet property="comparisonResultLabel" destination="Ybs-N6-ssa" id="Xzv-Ib-P4x"/>
+                        <outlet property="comparisonSegmentedController" destination="u3o-CR-bLc" id="UiI-Ve-k5d"/>
                         <outlet property="number1TextField" destination="3SI-eg-OgI" id="fWn-ef-dOI"/>
                         <outlet property="number2TextField" destination="qFf-Hv-VVv" id="LGC-Br-8nn"/>
                         <outlet property="operatorImageView" destination="8rV-0f-ZIW" id="dJm-Ms-yhW"/>

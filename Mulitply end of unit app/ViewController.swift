@@ -22,13 +22,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var comparisonClearButton: UIButton!
     @IBOutlet weak var comparisonResultButton: UIButton!
     @IBOutlet weak var comparisonResultLabel: UILabel!
-    
-    var operatorResult64 = "64"
-    var operatorUse = "+"
+    @IBOutlet weak var comparisonSegmentedController: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        comparisonResultLabel.text = "True or False"
     }
 
     @IBAction func displayOperatorResultButton(_ sender: UIButton) {
@@ -55,19 +54,112 @@ class ViewController: UIViewController {
     @IBAction func changeOperatorSegmentedController(_ sender: UISegmentedControl) {
 //        switch operatorSegmentedController.selectedSegmentIndex {
 //        case 0:
-            operatorUse
+          //  operatorUse
 //        default:
         
         }
 
     
-//    @IBAction func changeComparisonSegmentedController(_ sender: UISegmentedControl) {
-//    }
-//
-//    @IBAction func displayComparisonResultButton(_ sender: UIButton) {
-//    }
-//
-//    @IBAction func clearComparisonResultButton(_ sender: UIButton) {
-   // }
-}
+    @IBAction func changeComparisonSegmentedController(_ sender: UISegmentedControl) {
+        var comparisonFirstNumber = comparison1TextField.text!
+        var comparisonSecondNumber = comparison2TextField.text!
+        let comparisonFirstValue = (comparisonFirstNumber as NSString).intValue
+        let comparisonSecondValue = (comparisonSecondNumber as NSString).intValue
+        var comparisonTotalAnswer = false
+        switch comparisonSegmentedController.selectedSegmentIndex {
+        
+        case 0:
+            comparisonTotalAnswer = comparisonFirstValue > comparisonSecondValue
+            comparisonResultLabel.text = "\(comparisonTotalAnswer)"
+            
+            if comparisonResultLabel.text == "true" {
+                comparisonResultLabel.text = "True"
+            }
+            else if comparisonResultLabel.text == "false" {
+                comparisonResultLabel.text = "False"
+            }
+            comparison1TextField.resignFirstResponder()
+            comparison2TextField.resignFirstResponder()
+        case 1:
+            comparisonTotalAnswer = comparisonFirstValue >= comparisonSecondValue
+            comparisonResultLabel.text = "\(comparisonTotalAnswer)"
+            
+            if comparisonResultLabel.text == "true" {
+                comparisonResultLabel.text = "True"
+            }
+            else if comparisonResultLabel.text == "false" {
+                comparisonResultLabel.text = "False"
+            }
+            comparison1TextField.resignFirstResponder()
+            comparison2TextField.resignFirstResponder()
+        case 2:
+            comparisonTotalAnswer = comparisonFirstValue < comparisonSecondValue
+            comparisonResultLabel.text = "\(comparisonTotalAnswer)"
+            
+            if comparisonResultLabel.text == "true" {
+                comparisonResultLabel.text = "True"
+            }
+            else if comparisonResultLabel.text == "false" {
+                comparisonResultLabel.text = "False"
+            }
+            comparison1TextField.resignFirstResponder()
+            comparison2TextField.resignFirstResponder()
+        case 3:
+            comparisonTotalAnswer = comparisonFirstValue <= comparisonSecondValue
+            comparisonResultLabel.text = "\(comparisonTotalAnswer)"
+            
+            if comparisonResultLabel.text == "true" {
+                comparisonResultLabel.text = "True"
+            }
+            else if comparisonResultLabel.text == "false" {
+                comparisonResultLabel.text = "False"
+            }
+            comparison1TextField.resignFirstResponder()
+            comparison2TextField.resignFirstResponder()
+        case 4:
+            comparisonTotalAnswer = comparisonFirstValue == comparisonSecondValue
+            comparisonResultLabel.text = "\(comparisonTotalAnswer)"
+            
+            if comparisonResultLabel.text == "true" {
+                comparisonResultLabel.text = "True"
+            }
+            else if comparisonResultLabel.text == "false" {
+                comparisonResultLabel.text = "False"
+            }
+            comparison1TextField.resignFirstResponder()
+            comparison2TextField.resignFirstResponder()
+        case 5:
+            comparisonTotalAnswer = comparisonFirstValue != comparisonSecondValue
+            comparisonResultLabel.text = "\(comparisonTotalAnswer)"
+            
+            if comparisonResultLabel.text == "true" {
+                comparisonResultLabel.text = "True"
+            }
+            else if comparisonResultLabel.text == "false" {
+                comparisonResultLabel.text = "False"
+            }
+            comparison1TextField.resignFirstResponder()
+            comparison2TextField.resignFirstResponder()
+        default:
+            comparisonTotalAnswer = comparisonFirstValue > comparisonSecondValue
+            comparisonResultLabel.text = "\(comparisonTotalAnswer)"
+            
+            if comparisonResultLabel.text == "true" {
+                comparisonResultLabel.text = "True"
+            }
+            else if comparisonResultLabel.text == "false" {
+                comparisonResultLabel.text = "False"
+            }
+            comparison1TextField.resignFirstResponder()
+            comparison2TextField.resignFirstResponder()
+        }
+    }
 
+    @IBAction func displayComparisonResultButton(_ sender: UIButton) {}
+
+    @IBAction func clearComparisonResultButton(_sender: UIButton) {
+        comparisonResultLabel.text = "True or False"
+        comparison1TextField.text = " "
+        comparison2TextField.text = " "
+    }
+}
