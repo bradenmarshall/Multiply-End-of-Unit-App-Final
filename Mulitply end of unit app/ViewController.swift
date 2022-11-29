@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var operatorImageView: UIImageView!
     @IBOutlet weak var operatorResultLabel: UILabel!
     @IBOutlet weak var operatorSegmentedController: UISegmentedControl!
+    @IBOutlet weak var Slider1: UISlider!
+    @IBOutlet weak var Slider2: UISlider!
     
     @IBOutlet weak var comparison1TextField: UITextField!
     @IBOutlet weak var comparison2TextField: UITextField!
