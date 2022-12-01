@@ -22,11 +22,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var comparisonResultLabel: UILabel!
     @IBOutlet weak var comparisonSegmentedController: UISegmentedControl!
     
+    @IBOutlet weak var UIView1: UIView!
+    @IBOutlet weak var UIView2: UIView!
+    @IBOutlet weak var UIView3: UIView!
+    @IBOutlet weak var UIView4: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         comparisonResultLabel.text = "True or False"
-        
+        UIView1.backgroundColor = .systemCyan
+        UIView2.backgroundColor = .systemCyan
+        UIView3.backgroundColor = .systemCyan
+        UIView4.backgroundColor = .systemCyan
+
     }
 
     @IBAction func ChangeValueSlider(_ sender: UISlider) {
