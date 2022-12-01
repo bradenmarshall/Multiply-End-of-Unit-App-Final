@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         comparisonResultLabel.text = "True or False"
+        
     }
 
     @IBAction func ChangeValueSlider(_ sender: UISlider) {
